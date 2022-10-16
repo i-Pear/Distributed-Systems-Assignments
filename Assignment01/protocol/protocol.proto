@@ -13,5 +13,6 @@ message TimeRequest {
 }
 
 message TimeReply {
-  uint64 server_time = 1;
+  bool  success = 1;
+  int64 server_time = 2;
 }
