@@ -4,18 +4,14 @@ option go_package = "github.com/i-Pear/Distributed-Systems-Assignments/Assignmen
 
 package Assignment01;
 
-// The greeting service definition.
-service Greeter {
-  // Sends a greeting
-  rpc SayHello (HelloRequest) returns (HelloReply) {}
+service TimeService {
+  rpc GetTime (TimeRequest) returns (TimeReply) {}
 }
 
-// The request message containing the user's name.
-message HelloRequest {
-  string name = 1;
+message TimeRequest {
+  string token = 1;
 }
 
-// The response message containing the greetings
-message HelloReply {
-  string message = 1;
+message TimeReply {
+  uint64 server_time = 1;
 }
