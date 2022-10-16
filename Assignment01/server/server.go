@@ -26,13 +26,15 @@ func isValidToken(token string) bool {
 }
 
 func (s *server) GetTime(ctx context.Context, in *pb.TimeRequest) (*pb.TimeReply, error) {
-	log.Printf("Received Token: %s", in.GetToken())
 	if isValidToken(in.GetToken()) {
+		serverTime := time.Now().Unix()
+		log.Printf("Received Token: %s [%s]\tSend time: %s", in.GetToken(), "OK", time.Unix(serverTime, 0).String())
 		return &pb.TimeReply{
 			Success:    true,
-			ServerTime: time.Now().Unix(),
+			ServerTime: serverTime,
 		}, nil
 	} else {
+		log.Printf("Received Token: %s [%s]", in.GetToken(), "INVALID")
 		return &pb.TimeReply{
 			Success:    false,
 			ServerTime: -1,
