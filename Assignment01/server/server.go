@@ -44,14 +44,14 @@ func (s *server) GetTime(ctx context.Context, in *pb.TimeRequest) (*pb.TimeReply
 
 func main() {
 	flag.Parse()
-	lis, err := net.Listen("tcp", fmt.Sprintf(":%d", *port))
+	listen, err := net.Listen("tcp", fmt.Sprintf(":%d", *port))
 	if err != nil {
 		log.Fatalf("failed to listen: %v", err)
 	}
-	s := grpc.NewServer()
-	pb.RegisterTimeServiceServer(s, &server{})
-	log.Printf("server listening at %v", lis.Addr())
-	if err := s.Serve(lis); err != nil {
+	timeServer := grpc.NewServer()
+	pb.RegisterTimeServiceServer(timeServer, &server{})
+	log.Printf("server listening at %v", listen.Addr())
+	if err := timeServer.Serve(listen); err != nil {
 		log.Fatalf("failed to serve: %v", err)
 	}
 }
