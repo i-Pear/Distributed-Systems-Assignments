@@ -156,6 +156,7 @@ After the client initialized its connection to the server, it prints time data r
 
 ![img](https://m4q0j7d2yi.feishu.cn/space/api/box/stream/download/asynccode/?code=MjRmMGZmNjdjMzkwZTcyOGRhMGVmNTk0MDM5YWU0N2RfMXNsZWRBQ3Y5MTdicVVZTWZrV243R0l6b01GODRHNHNfVG9rZW46Ym94Y25EYTN1ZmpQVU44R2VrTDZwdlkzVUZiXzE2NjU5MzM5MDg6MTY2NTkzNzUwOF9WNA)
 
+Starting another client on another computer will display the same.
 And the server is also printing the times it sends to the client, with the clients' tokens:
 
 ![img](https://m4q0j7d2yi.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTQ2ZDcwMTllNDlhNTI5NjMzMTYyN2Q4OTZhOTc5N2JfYmdWZGRybWQxVmdwOTZNaGV3a2RTUmZaNlpobm96MVBfVG9rZW46Ym94Y25tTUpnbGV6c3RJMDZobEx3UndFOG5lXzE2NjU5MzM5MDg6MTY2NTkzNzUwOF9WNA)
