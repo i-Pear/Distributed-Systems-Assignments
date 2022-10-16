@@ -1,5 +1,7 @@
 syntax = "proto3";
 
+option go_package = "github.com/i-Pear/Distributed-Systems-Assignments/Assignment01/protocol";
+
 package Assignment01;
 
 // The greeting service definition.
